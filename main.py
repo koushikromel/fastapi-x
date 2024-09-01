@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-import uvicorn
 
 
 app = FastAPI()
@@ -10,9 +9,6 @@ def home():
     return "Welcome"
 
 @app.get("/{name}")
-def greet(name):
+def home(name):
     return f"Welcome {name}!"
 
-
-if __name__ == "__main__":
-    uvicorn.run(app)
